@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryLight">#9E9E9E</color>
+    <color name="colorPrimaryDark">#1A237E</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorLightVariant">#0D47A1</color>
+    <color name="colorLightVariant2">#3B007E</color>
+    <color name="colorAppBarLight">#0277BD</color>
+    <!--    <color name="colorTheme">#005A4F</color>-->
+    <color name="colorTheme">#000000</color>
+    <color name="colorTitle">#FFFFFF</color>
+    <color name="colorAppBar">#3B007E</color>
+    <color name="colorOpposite">#FFFFFF</color>
+    <color name="colorTextWelcome">#E3E3E3</color>
+<!--    <color name="colorMessageBackground">#013C04</color>-->
+    <color name="colorMessageBackground">#0F0030</color>
+    <color name="colorMessageBackgroundLight">#55353535</color>
+    <color name="colorMessageBackgroundLightMe">#230061</color>
+    <color name="colorMessageBackgroundMe">#B55B0C</color>
+    <color name="colorTextWhite">#FFFFFF</color>
+    <color name="colorMessageStamp">#595006</color>
+    <color name="colorMessageBackgroundOtherTheme">#55353535</color>
+    <color name="colorMessageBackgroundMeTheme">#230061</color>
+    <color name="colorMessageEditTextCardBackground">#004D40</color>
+</resources>

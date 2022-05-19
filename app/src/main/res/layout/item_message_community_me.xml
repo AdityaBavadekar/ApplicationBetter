@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="80dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="1dp"
+    android:elevation="0dp"
+    app:cardBackgroundColor="@color/colorMessageBackgroundMe"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:id="@+id/mainLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_back2"
+        android:orientation="vertical"
+        android:paddingVertical="15dp">
+
+
+        <TextView
+            android:id="@+id/sender"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingHorizontal="15dp"
+            android:paddingVertical="2dp"
+            android:textStyle="bold"
+            android:text="Me"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stamp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@color/colorMessageStamp"
+            android:minLines="1"
+            android:paddingVertical="5dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Yesterday\n 30 October 2021 02:31 am" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/image_view_background"
+            android:paddingHorizontal="15dp"
+            android:scaleType="fitXY"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/replyImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:minHeight="150dp"
+            android:src="@drawable/ic_baseline_image_24"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:minLines="1"
+            android:paddingHorizontal="15dp"
+            tools:text="@tools:sample/lorem/random[9]" />
+
+
+        <ImageView
+            android:id="@+id/ticksImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="15dp"
+            tools:src="@drawable/ic_baseline_done_all_24" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

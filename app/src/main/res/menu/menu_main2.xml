@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_wallpaper"
+        android:orderInCategory="99"
+        android:checkable="true"
+        android:checked="false"
+        android:title="@string/default_wallpaper" />
+
+    <item
+        android:id="@+id/action_change_wallpaper"
+        android:orderInCategory="99"
+        android:title="@string/change_wallpaper" />
+
+    <item
+        android:id="@+id/action_clear_chats"
+        android:orderInCategory="99"
+        android:title="@string/clear_chats" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/settings" />
+
+
+</menu>

@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory app:title="THEME" />
+    <ListPreference
+        app:defaultValue="3"
+        app:entries="@array/theme_entries"
+        app:entryValues="@array/theme_values"
+        app:key="theme"
+        app:title="Change Theme"
+        app:useSimpleSummaryProvider="true" />
+
+    <PreferenceCategory app:title="OTHER" />
+    <Preference
+        app:key="reset"
+        app:summary="Any app data in device will be deleted"
+        app:title="Reset all data and logout" />
+
+
+    <PreferenceCategory app:title="NOTIFICATIONS" />
+    <Preference
+        app:key="notifications"
+        app:title="Notifications" />
+
+
+    <PreferenceCategory app:title="ACCOUNT" />
+    <Preference
+        app:key="logout"
+        app:title="Logout ()" />
+
+    <Preference
+        app:fragment="com.adityaamolbavadekar.android.apps.better.ui.settings.SettingsActivity$MessagesFragment"
+        app:key="messages_header"
+        app:title="@string/messages_header" />
+
+    <Preference
+        app:fragment="com.adityaamolbavadekar.android.apps.better.ui.settings.SettingsActivity$SyncFragment"
+        app:key="sync_header"
+        app:title="@string/sync_header" />
+
+</PreferenceScreen>

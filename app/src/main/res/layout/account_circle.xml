@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:background="@drawable/account_layout_background"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <FrameLayout
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless">
+
+        <TextView
+            android:id="@+id/nameLetter"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:clickable="false"
+            android:focusable="false"
+            android:fontFamily="@font/roboto_light"
+            android:textIsSelectable="false"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+            android:linksClickable="false"
+            android:longClickable="false"
+            android:maxLength="1"
+            android:text="A" />
+    </FrameLayout>
+</FrameLayout>

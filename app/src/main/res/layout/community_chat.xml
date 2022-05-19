@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    tools:context=".ui.chatview.ChatViewerActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorAppBar"
+        app:liftOnScroll="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/menu_main2"
+            app:popupTheme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+            tools:title="@string/app_name" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@android:color/transparent"
+            android:scrollbarSize="3dp"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/constraint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:listitem="@layout/item_message_community" />
+
+        <!--
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+
+                    <ImageButton
+                        android:id="@+id/btnAdd"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_margin="5dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:contentDescription="send"
+
+                        android:padding="5dp"
+                        android:src="@drawable/add_btn"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    &lt;!&ndash;
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginHorizontal="15dp"
+                                    android:layout_marginVertical="5dp"
+                                    app:cardBackgroundColor="@color/colorAppBar"
+                                    app:cardCornerRadius="25dp"
+                                    app:cardElevation="0dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toStartOf="@+id/btnSend"
+                                    app:layout_constraintStart_toEndOf="@id/btnAdd"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <EditText
+                                        android:id="@+id/editTextMessage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginVertical="5dp"
+                                        android:layout_marginStart="15dp"
+                                        android:layout_marginEnd="10dp"
+                                        android:autofillHints=""
+                                        android:background="@android:color/transparent"
+                                        android:fadeScrollbars="true"
+                                        android:focusedByDefault="true"
+                                        android:hint="Enter a message"
+                                        android:importantForAutofill="no"
+                                        android:inputType="textMultiLine"
+                                        android:maxHeight="230dp"
+                                        android:padding="10dp"
+                                        android:scrollbarSize="1dp"
+                                        android:textColorHighlight="@color/colorLightVariant"
+                                        android:textStyle="normal"
+                                        tools:text="@tools:sample/lorem/random" />
+
+                                </androidx.cardview.widget.CardView>
+                    &ndash;&gt;
+
+                    <EditText
+                        android:id="@+id/editTextMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:autofillHints=""
+                        android:background="@drawable/editxt_message_background"
+                        android:fadeScrollbars="true"
+                        android:focusedByDefault="true"
+                        android:fontFamily="sans-serif-light"
+                        android:hint="Enter a message"
+                        android:importantForAutofill="no"
+                        android:inputType="textMultiLine"
+                        android:maxHeight="230dp"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="15dp"
+                        android:scrollbarSize="1dp"
+                        android:textColorHighlight="@color/colorLightVariant"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/btnSend"
+                        app:layout_constraintStart_toEndOf="@id/btnAdd"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="@tools:sample/lorem/random" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnSend"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_margin="5dp"
+                        android:background="?selectableItemBackgroundBorderless"
+                        android:contentDescription="send"
+                        android:padding="5dp"
+                        android:src="@drawable/btn_send"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+        -->
+        <!--        <include layout="@layout/bottom_box" />-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/constraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <ImageButton
+                android:id="@+id/btnAdd"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_margin="10dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="send"
+                android:padding="5dp"
+                android:src="@drawable/add_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginHorizontal="15dp"
+                            android:layout_marginVertical="5dp"
+                            app:cardBackgroundColor="@color/colorAppBar"
+                            app:cardCornerRadius="25dp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/btnSend"
+                            app:layout_constraintStart_toEndOf="@id/btnAdd"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <EditText
+                                android:id="@+id/editTextMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginVertical="5dp"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginEnd="10dp"
+                                android:autofillHints=""
+                                android:background="@android:color/transparent"
+                                android:fadeScrollbars="true"
+                                android:focusedByDefault="true"
+                                android:hint="Enter a message"
+                                android:importantForAutofill="no"
+                                android:inputType="textMultiLine"
+                                android:maxHeight="230dp"
+                                android:padding="10dp"
+                                android:scrollbarSize="1dp"
+                                android:textColorHighlight="@color/colorLightVariant"
+                                android:textStyle="normal"
+                                tools:text="@tools:sample/lorem/random" />
+
+                        </androidx.cardview.widget.CardView>
+            -->
+
+            <EditText
+                android:id="@+id/editTextMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:autofillHints=""
+                android:background="@drawable/editxt_message_background"
+                android:fadeScrollbars="true"
+                android:focusedByDefault="true"
+                android:fontFamily="sans-serif-light"
+                android:hint="Enter a message"
+                android:importantForAutofill="no"
+                android:inputType="textMultiLine"
+                android:maxHeight="230dp"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:scrollbarSize="1dp"
+                android:textColorHighlight="@color/colorLightVariant"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnSend"
+                app:layout_constraintStart_toEndOf="@id/btnAdd"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/btnSend"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:contentDescription="send"
+                android:padding="5dp"
+                android:src="@drawable/btn_send"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

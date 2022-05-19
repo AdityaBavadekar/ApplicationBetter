@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Better</string>
+    <string name="manage_account">Manage Account</string>
+    <string name="notifications">Notifications</string>
+    <string name="new_group">New group</string>
+    <string name="share_app">Share App</string>
+    <string name="settings">Settings</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="something_went_wrong">Something went wrong…</string>
+    <string name="time_out">Time Out</string>
+    <string name="time_out_pls_try_again">Time out. Please try again later.</string>
+    <string name="sixty">60</string>
+    <string name="better_contacts_permission_statement">Better needs contact permission to help you connect with friends. Your contacts are uploaded using Better\'s private contact centre, which means they are end-to-end encrypted and never visible to Better Team or other Users</string>
+    <string name="invalid_phone_error">Please enter valid 10-digit Phone Number</string>
+    <string name="pls_verify_all_details">Please verify Country Code and Phone Number</string>
+    <string name="save">Save</string>
+    <string name="about">About</string>
+    <string name="name">Name</string>
+    <string name="account_updated">Account updated</string>
+    <string name="profile_name_updated">Profile name updated</string>
+    <string name="are_you_sure_logout">Are you sure you want to <b>Logout %s</b> ?\n<i>Note: this action cannot be undone</i></string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="name_about_and_phone_number_are_publicly_visible_fields"><b>Name, About and Phone number</b> are publicly visible fields</string>
+    <string name="personal_notes">Personal Notes</string>
+    <string name="debug_mode">DEBUG MODE</string>
+    <string name="debug_application">Debug Application</string>
+    <string name="change_wallpaper">Change wallpaper</string>
+    <string name="clear_chats">Clear chats</string>
+    <string name="default_wallpaper">Default wallpaper</string>
+    <string name="timestamp_formatted_today_string">Today  at %s</string>
+    <string name="phone_number_auto_dialog_text_formatted">Use as your <i>%s</i> phone number for OTP? \nStandard SMS Rate will apply</string>
+    <string name="yesterday_at_formatted">Yesterday at %s</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">Tj7cyIVDgBkCtDvNlxvWzRH49X6D8PQtb1zzqh1e</string>
+    <string name="back4app_client_key">DHcACUlU7oKv7GASO20Np4v3ZAZtHiUwTc1df7UZ</string>
+
+</resources>

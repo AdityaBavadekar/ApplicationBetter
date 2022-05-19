@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:elevation="0dp"
+    android:longClickable="true"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:background="@android:color/transparent"
+        android:longClickable="true"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="3dp">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            tools:layout_height="300dp">
+            <!--                    android:background="@drawable/card_back2"-->
+
+<!--            YOU-->
+            <LinearLayout
+                android:id="@+id/mainLinearLayoutMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:clickable="true"
+                android:background="@drawable/chat_back_main2"
+                android:orientation="vertical"
+                android:paddingVertical="15dp"
+                android:visibility="gone">
+
+
+                <TextView
+                    android:id="@+id/senderMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:textColor="@android:color/white"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="2dp"
+                    android:text="You"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/stampMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/transparent"
+                    android:paddingVertical="2dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="25dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Yesterday\n 30 October 2021 02:31 am" />
+
+
+                <ImageView
+                    android:id="@+id/imageViewMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/image_view_background"
+                    android:paddingHorizontal="15dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/replyImageViewMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:minHeight="150dp"
+                    android:src="@drawable/ic_baseline_image_24"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/messageMe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:autoLink="all"
+                    android:background="@android:color/transparent"
+                    android:linksClickable="true"
+                    android:maxWidth="250dp"
+                    android:minLines="1"
+
+                    android:textColor="@android:color/white"
+                    android:paddingHorizontal="15dp"
+                    tools:text="@tools:sample/lorem/random" />
+
+
+                <ImageView
+                    android:id="@+id/ticksImageViewMe"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="15dp"
+                    tools:src="@drawable/ic_baseline_done_all_24" />
+
+            </LinearLayout>
+
+<!--            SENDER-->
+            <LinearLayout
+                android:id="@+id/mainLinearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/chat_back_main"
+                android:orientation="vertical"
+                android:paddingVertical="15dp"
+                tools:visibility="visible"
+                android:focusable="true">
+
+
+                <TextView
+                    android:id="@+id/sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/transparent"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingHorizontal="15dp"
+                    android:paddingVertical="2dp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@tools:sample/full_names" />
+
+                <TextView
+                    android:id="@+id/stamp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@android:color/transparent"
+                    android:minLines="1"
+                    android:textColor="@android:color/white"
+                    android:paddingVertical="2dp"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="10dp"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="30 Oct 2021 02:31 am" />
+
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/image_view_background"
+                    android:paddingHorizontal="15dp"
+                    android:scaleType="fitXY"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/replyImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="15dp"
+                    android:minHeight="150dp"
+                    android:src="@drawable/ic_baseline_image_24"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:autoLink="all"
+                    android:textColor="@android:color/white"
+
+                    android:background="@android:color/transparent"
+                    android:linksClickable="true"
+                    android:maxWidth="250dp"
+                    android:minLines="1"
+                    android:paddingHorizontal="15dp"
+                    tools:text="@tools:sample/lorem/random[5]" />
+
+
+                <ImageView
+                    android:id="@+id/ticksImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingHorizontal="15dp"
+                    android:visibility="gone"
+                    tools:src="@drawable/ic_baseline_done_all_24" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

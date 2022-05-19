@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/scrollbar_thumb" />
+    <item
+        android:bottom="25dp"
+        android:drawable="@drawable/ic_baseline_keyboard_arrow_up_24" />
+    <item
+        android:drawable="@drawable/ic_baseline_keyboard_arrow_down_24"
+        android:top="25dp" />
+
+</layer-list>
